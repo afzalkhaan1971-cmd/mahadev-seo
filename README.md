@@ -36,6 +36,6 @@ No deployment has been performed from this workspace.
 
 ## Current domain
 
-The current production base domain is `https://mahadev-seo.onrender.com`. It is used in canonical links, Open Graph URLs, JSON-LD, `robots.txt`, and `sitemap.xml`.
+The current production base domain is `https://cricketidinfo.org`. It is used in canonical links, Open Graph URLs, JSON-LD, `robots.txt`, and `sitemap.xml`.
 
 If a custom domain is connected later, replace this exact URL globally, keep trailing slashes consistent, and confirm every URL uses HTTPS.
