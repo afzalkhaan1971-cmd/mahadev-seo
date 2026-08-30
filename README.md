@@ -34,8 +34,8 @@ Then open `http://localhost:8000/`. A server is recommended instead of opening t
 
 No deployment has been performed from this workspace.
 
-## Change the temporary domain
+## Current domain
 
-The placeholder base domain is `https://example.com`. Replace that exact string globally after the final Render or custom domain is known. It appears in canonical links, Open Graph URLs, JSON-LD, `robots.txt`, and `sitemap.xml`.
+The current production base domain is `https://mahadev-seo.onrender.com`. It is used in canonical links, Open Graph URLs, JSON-LD, `robots.txt`, and `sitemap.xml`.
 
-After replacing it, keep trailing slashes consistent and confirm every URL uses HTTPS.
+If a custom domain is connected later, replace this exact URL globally, keep trailing slashes consistent, and confirm every URL uses HTTPS.
