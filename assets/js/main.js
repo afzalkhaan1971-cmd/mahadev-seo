@@ -1,3 +1,12 @@
+window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
+window.gtag('js',new Date());
+window.gtag('config','G-VECW1DQ50B');
+const analyticsScript=document.createElement('script');
+analyticsScript.async=true;
+analyticsScript.src='https://www.googletagmanager.com/gtag/js?id=G-VECW1DQ50B';
+document.head.appendChild(analyticsScript);
+
 const toggle=document.querySelector('.nav-toggle');
 const nav=document.querySelector('.nav-list');
 if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});nav.addEventListener('click',e=>{if(e.target.matches('a')){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.focus();}});}
