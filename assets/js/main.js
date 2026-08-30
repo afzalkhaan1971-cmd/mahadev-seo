@@ -23,3 +23,28 @@ if(location.pathname==='/'||location.pathname.endsWith('/index.html')){
     heroActions.insertBefore(heroWhatsApp,heroActions.lastElementChild);
   }
 }
+
+const legalLinks=[['About','/about/'],['Contact','/contact/'],['Privacy','/privacy-policy/'],['Terms','/terms/'],['Disclaimer','/disclaimer/']];
+let footer=document.querySelector('.site-footer');
+if(!footer){
+  footer=document.createElement('footer');
+  footer.className='site-footer';
+  footer.innerHTML='<div class="container"><div class="copyright">© <span data-year></span> Mahadev. Informational content only.</div></div>';
+  document.body.insertBefore(footer,document.querySelector('script[src="/assets/js/main.js"]'));
+  footer.querySelector('[data-year]').textContent=new Date().getFullYear();
+}
+const copyright=footer.querySelector('.copyright');
+if(copyright&&!footer.querySelector('.legal-links')){
+  const legal=document.createElement('nav');
+  legal.className='legal-links';
+  legal.setAttribute('aria-label','Legal and company information');
+  legal.innerHTML=legalLinks.map(([label,url])=>`<a href="${url}">${label}</a>`).join('');
+  copyright.before(legal);
+}
+
+document.addEventListener('click',event=>{
+  const link=event.target.closest('a[href*="wa.link"],a[data-whatsapp-contact]');
+  if(link&&typeof window.gtag==='function'){
+    window.gtag('event','whatsapp_click',{link_url:link.href,page_path:location.pathname});
+  }
+});
