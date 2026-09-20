@@ -13,7 +13,7 @@ if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.to
 document.querySelectorAll('[data-year]').forEach(el=>{el.textContent=new Date().getFullYear();});
 const whatsapp=document.createElement('a');
 whatsapp.className='whatsapp-float';
-whatsapp.href='https://wa.link/mdenq1';
+whatsapp.href='https://zalinks.in/mdenq';
 whatsapp.target='_blank';
 whatsapp.rel='noopener noreferrer';
 whatsapp.setAttribute('aria-label','Contact Mahadev on WhatsApp');
@@ -25,7 +25,7 @@ if(location.pathname==='/'||location.pathname.endsWith('/index.html')){
   if(heroActions){
     const heroWhatsApp=document.createElement('a');
     heroWhatsApp.className='button whatsapp';
-    heroWhatsApp.href='https://wa.link/mdenq1';
+    heroWhatsApp.href='https://zalinks.in/mdenq';
     heroWhatsApp.target='_blank';
     heroWhatsApp.rel='noopener noreferrer';
     heroWhatsApp.textContent='WhatsApp us';
@@ -52,7 +52,7 @@ if(copyright&&!footer.querySelector('.legal-links')){
 }
 
 document.addEventListener('click',event=>{
-  const link=event.target.closest('a[href*="wa.link"],a[data-whatsapp-contact]');
+  const link=event.target.closest('a[href*="zalinks.in/mdenq"],a[data-whatsapp-contact]');
   if(link&&typeof window.gtag==='function'){
     window.gtag('event','whatsapp_click',{link_url:link.href,page_path:location.pathname});
   }
